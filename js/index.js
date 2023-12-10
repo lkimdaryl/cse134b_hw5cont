@@ -29,8 +29,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     curConditions.then(currentPeriod => {
         if (currentPeriod) {
-        let iconURL = currentPeriod.icon.split(',')[0];
-        console.log(iconURL);
+            let iconURL = currentPeriod.icon.split(',')[0];
             weatherContainer.innerHTML = `<img src="${iconURL}" id="icon">
                                           <span id="forecast">${currentPeriod.shortForecast}</span>
                                           <p>
@@ -49,8 +48,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
                                             <span>${currentPeriod.probabilityOfPrecipitation.value}%</span>
                                           </p>
                                           `;
-            const temperature = currentPeriod.temperature;
-            console.log("Temperature:", temperature);
         } else {
             const error = "No current weather data available.";
             console.error(error);
