@@ -44,6 +44,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
                                             <span>${currentPeriod.windDirection}</span>
                                           <p>
                                           <p>
+                                            <span>Humidity: </span>
+                                            <span>${currentPeriod.relativeHumidity.value}%</span>
+                                          </p>
+                                          <p>
                                             <span>Probability of Precipitation: </span>
                                             <span>${currentPeriod.probabilityOfPrecipitation.value}%</span>
                                           </p>
